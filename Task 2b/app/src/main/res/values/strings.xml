@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Cheese Chase</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="start">START</string>
+    <string name="game_title">CHEESE\n\t\t\t\tCHASE</string>
+    <string name="file_key">Mute</string>
+</resources>
