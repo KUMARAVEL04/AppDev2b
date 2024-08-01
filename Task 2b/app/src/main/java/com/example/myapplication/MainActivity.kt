@@ -18,6 +18,7 @@ import android.view.WindowInsetsController
 import android.widget.Button
 import android.widget.FrameLayout
 import android.widget.TextView
+import androidx.activity.OnBackPressedCallback
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowCompat
@@ -53,6 +54,14 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
+        val onBackPressedCallback: OnBackPressedCallback = object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                val home = Intent(this@MainActivity, MainActivity2::class.java)
+                val options = ActivityOptions.makeCustomAnimation(baseContext, androidx.appcompat.R.anim.abc_fade_in, androidx.appcompat.R.anim.abc_fade_out).toBundle()
+                finish()
+                startActivity(home,options)            }
+        }
+        onBackPressedDispatcher.addCallback(this, onBackPressedCallback)
         enableEdgeToEdge()
         canvasView = MyView(this)
         val backgroundView = BackgroundView(this)

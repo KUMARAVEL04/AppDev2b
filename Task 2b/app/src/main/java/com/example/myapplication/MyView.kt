@@ -438,7 +438,7 @@ class MyView:View {
 
     fun jerryIntersects() {
         val iterator2 = obsList.iterator()
-        while (iterator2.hasNext() && jerry.colDur == 0 && collision<collisionLimit-1) {
+        while (iterator2.hasNext() && jerry.colDur == 0) {
             if (iterator2.next().intersect(jerry)) {
                 if (collision < collisionLimit) {
                     val mp = MediaPlayer.create(context, R.raw.wrong)

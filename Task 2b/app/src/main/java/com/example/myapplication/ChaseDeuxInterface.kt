@@ -41,6 +41,7 @@ interface ChaseDeuxInterface {
 
     @GET("/hitHindrance")
     suspend fun getLuck(): Response<LuckEffect>
+
     @POST("/randomWord")
     suspend fun getWord(@Body length:Map<String,Int>): Response<WordResponse>
 
